@@ -34,6 +34,9 @@ Also, check the timestep after which you're writing particle stats and .tgz file
 + **Changes to be made to parameters file**  
 Change itime_min equal to the time step you want to restart from + 1 (+1 because in the 
 code itime=itime_min - 1. Therefore, restart files read will be corresponding to the itime_min - 1).  
+Change IsoDecay if required.  
+Change restart_flag = .true.  
+Change initialization_flag = .false.  
 + **Things to check in driver.f90**  
 Make sure the path of directories for particles locations (parpos), number of particles (parlog) and particles  
 velocities (accel) is correct. Also, the parpos and accel files at the restart time should be present in these 
