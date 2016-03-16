@@ -25,6 +25,10 @@ Change tau_eta to the averaged value obtained from Isostats.dat from the fluid p
 Change Isodecay to the desired value.  
 Make sure that the initialization_flag = .true. and restart_flag = .false.  
 Change file_flag = .true., if you want to write out S^2 and R^2 data.  
+Change thresh_time and end_tr_time if particle tracking is on.  
+
++ **Changes to be made to the run directory**  
+Make sure the directories required for tracking particles are present.
 
 + **Changes to be made to pardata_new.dat file**  
 Make sure the desired number of St are listed and value in the second column = NDSIP/StClass in global.f90.  
