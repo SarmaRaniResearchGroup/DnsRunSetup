@@ -18,11 +18,14 @@ comment out 'call pulse_start_corr' and uncomment restart file calls: 'call star
 # Introducing particles after fluid flow-field achieved stationarity  
 + **Changes to be made to makefile**  
 Uncomment the DPARTICLE option.  
+Add DTRACK option if you want particle tracking.  
 + **Changes to be made to parameters file**  
 Change itime_min = IsoDecay in the fluid part.  
 Change tau_eta to the averaged value obtained from Isostats.dat from the fluid part run.  
 Change Isodecay to the desired value.  
-Make sure that the 'initialization_flag' = .true.  
+Make sure that the initialization_flag = .true. and restart_flag = .false.  
+Change file_flag = .true., if you want to write out S^2 and R^2 data.  
+
 + **Changes to be made to pardata_new.dat file**  
 Make sure the desired number of St are listed and value in the second column = NDSIP/StClass in global.f90.  
 + **Changes to be made to driver.f90 file**  
